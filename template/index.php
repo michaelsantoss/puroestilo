@@ -25,6 +25,14 @@
 
   <!-- Custom styles for this template-->
   <link href="css/sb-admin.css" rel="stylesheet">
+  <script type="text/javascript">
+    function excluir(id) {
+      if(confirm("Deseja realmente excluir esse item?")){
+        window.location.href='acao/excluir.php?id='+id;
+
+      }
+    }
+  </script>
 
 </head>
 
@@ -134,7 +142,7 @@
                     <td><?php echo $dados['quantidade']; ?></td>
                     <td><?php echo $dados['valor_pago']; ?></td>
                     <td><?php echo $dados['valor_venda']; ?></td>
-                    <td><button type="button" onclick="window.location.href='vender.php?id=<?php echo $dados['id_prod']; ?>'">Vender</button><button type="button" onclick="window.location.href='atualizar.php?id=<?php echo $dados['id_prod']; ?>'">Atualizar</button><button type="button">Excluir</button></td>
+                    <td><button type="button" onclick="window.location.href='vender.php?id=<?php echo $dados['id_prod']; ?>'">Vender</button><button type="button" onclick="window.location.href='atualizar.php?id=<?php echo $dados['id_prod']; ?>'">Atualizar</button><button type="button" onclick="excluir(<?php echo $dados['id_prod']; ?>)">Excluir</button></td>
                   </tr>
                   <?php 
                     }

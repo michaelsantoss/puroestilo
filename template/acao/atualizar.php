@@ -14,8 +14,7 @@
   $vv = $_POST['vv'];
   $vendedor = $_SESSION['nome'];
  
- var_dump($_POST);
- $acao = "UPDATE prod_vendidos SET nome=$nome, tamanho = $tamanho, descricao = $descricao, quantidade = $quantidade, valor_pago = $valorpago, valor_venda = $vv)WHERE id_prod=$id";
+ $acao = "UPDATE prod_disponiveis SET nome=$nome, tamanho = $tamanho, descricao = $descricao, quantidade = $quantidade, valor_pago = $valorpago, valor_venda = $vv WHERE id_prod=$id";
   $result = mysqli_query($conn,$acao);
   if ($result) {
     echo "<script>
