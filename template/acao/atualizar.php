@@ -7,16 +7,19 @@
   
   $id = $_POST['id'];
   $nome = $_POST['nomep'];
-  $vv = $_POST['vv'];
+  $tamanho = $_POST['tam'];
   $quantidade = $_POST['quantidade'];
+  $descricao = $_POST['desc'];
+  $valorpago = $_POST['valorpago'];
+  $vv = $_POST['vv'];
   $vendedor = $_SESSION['nome'];
-  $cliente = $_POST['comprador'];
-
- $acao = "INSERT INTO prod_vendidos(id_prod,nome, valor_venda, quantidade, vendedor, cliente)VALUES('$id','$nome','$vv','$quantidade','$vendedor','$cliente')";
+ 
+ var_dump($_POST);
+ $acao = "UPDATE prod_vendidos SET nome=$nome, tamanho = $tamanho, descricao = $descricao, quantidade = $quantidade, valor_pago = $valorpago, valor_venda = $vv)WHERE id_prod=$id";
   $result = mysqli_query($conn,$acao);
   if ($result) {
     echo "<script>
-          alert('Produto vendido com sucesso!');
+          alert('Produto atualizado com sucesso!');
           window.location.href='../';
           </script>";
   }else{

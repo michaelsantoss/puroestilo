@@ -134,7 +134,7 @@
                     <td><?php echo $dados['quantidade']; ?></td>
                     <td><?php echo $dados['valor_pago']; ?></td>
                     <td><?php echo $dados['valor_venda']; ?></td>
-                    <td><button type="button" onclick="window.location.href='vender.php?id=<?php echo $dados['id_prod']; ?>'">Vender</button><button type="button">Atualizar</button><button type="button">Excluir</button></td>
+                    <td><button type="button" onclick="window.location.href='vender.php?id=<?php echo $dados['id_prod']; ?>'">Vender</button><button type="button" onclick="window.location.href='atualizar.php?id=<?php echo $dados['id_prod']; ?>'">Atualizar</button><button type="button">Excluir</button></td>
                   </tr>
                   <?php 
                     }

@@ -107,16 +107,16 @@
             <div class="container">
     <div class="card card-login mx-auto mt-5">
       <div class="card-body">
-        <form action="acao/vender.php" method="POST">
+        <form action="acao/atualizar.php" method="POST">
           <div class="form-group">
             <div class="form-label-group">
-              <input type="text" id="nome" class="form-control" value="<?php echo $dados['nome']; ?>" name="nomep" readonly>
+              <input type="text" id="nome" class="form-control" value="<?php echo $dados['nome']; ?>" name="nomep" >
               <label for="nome">Nome do Produto</label>
             </div>
           </div>
           <div class="form-group">
             <div class="form-label-group">
-              <input type="text" id="tam" class="form-control" value="<?php echo $dados['tamanho']; ?>" name="tam" disabled>
+              <input type="text" id="tam" class="form-control" value="<?php echo $dados['tamanho']; ?>" name="tam" >
               <label for="tam">Tamanho</label>
             </div>
           </div>
@@ -128,40 +128,34 @@
           </div>
           <div class="form-group">
             <div class="form-label-group">
-              <input type="text" id="desc" class="form-control" value="<?php echo $dados['descricao']; ?>" name="desc" disabled>
+              <input type="text" id="desc" class="form-control" value="<?php echo $dados['descricao']; ?>" name="desc">
               <label for="desc">Descrição</label>
             </div>
           </div>
           <div class="form-group">
             <div class="form-label-group">
-              <input type="text" id="vp" class="form-control" value="<?php echo $dados['valor_pago']; ?>" name="valorpago" disabled>
+              <input type="text" id="vp" class="form-control" value="<?php echo $dados['valor_pago']; ?>" name="valorpago">
               <label for="vp">Valor Pago</label>
             </div>
           </div>
           <div class="form-group">
             <div class="form-label-group">
-              <input type="text" id="vv" class="form-control" value="<?php echo $dados['valor_venda']; ?>" name="vv" readonly>
+              <input type="text" id="vv" class="form-control" value="<?php echo $dados['valor_venda']; ?>" name="vv">
               <label for="vv">Valor para vender</label>
-            </div>
-          </div>
-          <div class="form-group">
-            <div class="form-label-group">
-              <input type="text" id="cp" class="form-control" required="required" name="comprador" >
-              <input type="hidden" name="id" value="<?php echo $dados['id_prod']; ?>">
-              <label for="cp">Comprador(a)</label>
             </div>
           </div>
           <?php 
             }
            ?>
-          <input type="submit" class="btn btn-primary btn-block" value="Vender">
+           <input type="hidden" name="id" value="<?php echo $id;?>">
+          <input type="submit" class="btn btn-primary btn-block" value="Atualizar">
         </form>
         
       </div>
     </div>
   </div>
           </div>
-          <div class="card-footer small text-muted">Ultima atualização feita em 14:35</div>
+          <div class="card-footer small text-muted">Ultima atualização feita em 03/07/2020</div>
         </div>
 
       </div>
